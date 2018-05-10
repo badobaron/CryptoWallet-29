@@ -5,16 +5,16 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { HttpService } from './http.service';
 import { NgReduxModule } from 'ng2-redux';
-
+import {MessageHandlerComponent } from './message-handler.component';
 
 @NgModule({
-  declarations: [NavbarComponent],
+  declarations: [NavbarComponent, MessageHandlerComponent],
   imports: [
     RouterModule,
     CommonModule
   ],
   providers: [HttpService, NgReduxModule],
-  exports: [NavbarComponent]
+  exports: [NavbarComponent, MessageHandlerComponent]
 })
 
 export class CoreModule { }
